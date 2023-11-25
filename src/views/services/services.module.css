@@ -1,0 +1,97 @@
+.services {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10vh 8%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.tecnology {
+  max-width: 650px;
+}
+
+.tecnology .tecno {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.cards {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.cards .blue {
+  backdrop-filter: blur(3rem) ;
+  background-color: rgba(0, 76, 134, 0.1);
+}
+
+.cards .white{
+backdrop-filter: blur(3rem) ;
+  background-color: rgba(0, 134, 236, 0.8); 
+}
+
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  height: 150px;
+  width: 300px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.cards .card:hover {
+  transform: scale(1.02, 1.02);
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(1px);
+  transform: scale(0.95, 0.95);
+}
+
+.services .svg, .card{
+  view-timeline-name: --revealing-image;
+  view-timeline-axis: block;
+
+  animation-name: show;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+  animation-timeline: --revealing-image;
+
+  animation-range: entry 25% cover 50%;
+}
+
+@keyframes show {
+    from{
+        opacity: 0;
+        scale: 70%;
+    }
+
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
